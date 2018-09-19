@@ -75,11 +75,13 @@ WSGI_APPLICATION = 'DjangoSchafer.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+    		'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'techpalmy',
+            'USER': 'root',
+            'PASSWORD': 'newpassword',
+        }
     }
-}
 
 
 # Password validation
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Pacific/Auckland'
 
 USE_I18N = True
 
