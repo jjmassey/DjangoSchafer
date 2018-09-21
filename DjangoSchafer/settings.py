@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'DjangoSchafer.wsgi.application'
 DATABASES = {
         'default': {
     		'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'techpalmy',
+            'NAME': 'schafer',
             'USER': 'root',
             'PASSWORD': 'newpassword',
         }
