@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: #ffffff;
   color: #333333;
   margin-top: 5rem;
 }
@@ -47,6 +47,7 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
+  hyphens: auto;
 }
 
 .article-img {
@@ -86,4 +87,25 @@ a.article-title:hover {
 
 .navbar {
     background-color: #009959;
+}
+
+/* Additions */
+
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+    padding-bottom: 50px;
+}
+
+footer {
+    height: 100px;
+    margin-top:50px;
+    position: relative;
+    height:100px;
+    background: #343434;
+    color: #FFFFFF;
+    text-align: center;
 }
