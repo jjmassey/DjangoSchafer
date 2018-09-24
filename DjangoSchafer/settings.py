@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',     # allows access to our templates / databases
+    'jobs.apps.JobsConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
     'django.contrib.admin',

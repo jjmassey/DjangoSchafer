@@ -19,9 +19,20 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
+from jobs import views as jobs_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', include('blog.urls')),
+
+    path('jobs/', jobs_views.JobPageView.as_view(), name ='jobs-home'),
+    path('user/<str:username>', jobs_views.UserJobPageView.as_view(), name='user-jobs'),
+    path('job/<int:pk>/', jobs_views.JobDetailView.as_view(), name='job-detail'),
+    path('job/new/', jobs_views.JobCreateView.as_view(), name='job-create'),
+    path('job/<int:pk>/update/', jobs_views.JobUpdateView.as_view(), name='job-update'),
+    path('job/<int:pk>/delete/', jobs_views.JobDeleteView.as_view(), name='job-delete'),
+
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
@@ -30,7 +41,7 @@ urlpatterns = [
     path('password-reset/done', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
     path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
-    path('', include('blog.urls')),
+
 ]
 
 if settings.DEBUG:
