@@ -1,0 +1,61 @@
+VIRTUAL ENV
+
+  	## Change dir to venvs and then run:
+
+		virtualenv envDjangoSchafer					// create vitrual env called envDjangoSchafer
+
+	## Change back to dir GitHub:
+
+		source ../venvs/envDjangoSchafer/bin/activate	// activate virtual environment
+		source venvs/envDjangoSchafer/bin/activate
+
+
+DJANGOSCHAFER SETUP INSTRUCTIONS
+
+	django-admin startproject DjangoSchafer    	// Start a project
+
+	pip3 install django			// installl django
+
+	## Set up a repository on GITHUB before steps below ##
+
+	git init
+
+    git remote add origin https://github.com/jjmassey/envDjangoSchafer.git     // Add origin master
+
+    git push --set-upstream origin master   // Allow pushes to origin master
+
+	## Create .gitignore file with *.pyc inside of it to ignore pyc files ##
+
+
+DJANGOSCHAFER TUTORIAL
+
+	python3 manage.py startapp blog			// Create "app" blog
+
+	** Create urls.py and match the urls from main app to blog app as well as views.py
+
+
+ADMIN CREATESUPERUSER
+
+	python3 manage.py createsuperuser
+
+	Username: jjmassey
+
+	Email address: funakithunder@gmail.com
+
+	Password: testing321
+
+MYSQL
+
+	mysql -u root -p
+
+    password: newpassword
+
+DJANGO DATABASE MIGRATIONS
+
+	python3 manage.py makemigrations	// 
+
+	python3 manage.py migrate			// 
+
+
+
+
